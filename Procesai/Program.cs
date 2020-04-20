@@ -96,7 +96,7 @@ namespace Procesai
             Console.WriteLine($"Turnaround / RT (avarage) = { (isViso - paleidimoLaikai) / laikai.Count }");
         }
 
-        public static void SPF(List<int> laikai, int paleidimoLaikai = 0)
+        public static void SPF(List<int> laikai)
         {
             Console.WriteLine("SPF: ");
             var kopija = laikai.OrderBy(x => x).ToList();
@@ -112,8 +112,8 @@ namespace Procesai
 
                 isViso += suma;
             }
-            Console.WriteLine($"Wt (avarage) = { (suma2 - paleidimoLaikai) / laikai.Count}");
-            Console.WriteLine($"Turnaround / RT (avarage) = { (isViso - paleidimoLaikai) / laikai.Count }");
+            Console.WriteLine($"Wt (avarage) = { suma2 / laikai.Count}");
+            Console.WriteLine($"Turnaround / RT (avarage) = { isViso / laikai.Count }");
         }
     }
 }
